@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bitcoin-Refernce</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="gray" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+        </svg>
+        <span class="fs-4">비트코인 시세</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">UpBit</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Upbit API</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Bootstrap</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">비트코인 시세 확인페이지</h1>
+        <p class="lead text-muted">비트코인 시세를 확인할 수 있는 웹페이지를 제작하였습니다.
+          제가 선호하는 9가지의 비트코인의 시세와 거래소로 이동 할 수 있는 기능을 구현하고 Cloud-Front로 정적 호스팅을 진행하였습니다.
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">거래소 이동</a>
+          <a href="#" class="btn btn-secondary my-2">우왕</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  
+  <div>
+   <div id="displays" class="container">
+      
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://media.istockphoto.com/vectors/bitcoin-currency-coin-orange-for-icon-isolated-on-white-bitcion-for-vector-id1218891322?k=20&m=1218891322&s=612x612&w=0&h=ZldH-wS2KLqPmNtlBDhsmQhYt8Zk0Uc3eapxwlYwCLQ=" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">비트코인</h5>
+                <p class="card-text">비트코인에 대한 설명</p>
+                <p>
+                  <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#bitcoinQuote" role="button" aria-expanded="false" aria-controls="bitcoinQuote">
+                    현재 시세 보기
+                  </a>
+                  <button id="bitcoin" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                    거래소 이동
+                  </button>
+                </p>
+                <div class="collapse" id="bitcoinQuote">
+                  <div id="bit-price" class="card card-body">
+                    
+                  </div>
+                </div>    
+              </div>
+            </div>
+          
+          
+         
+            <div class="card" style="width: 18rem;">
+              <img src="https://www.coinreaders.com/imgdata/coinreaders_com/201810/2018100236155452.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">리플</h5>
+                <p class="card-text">리플에 대한 설명</p>
+                <p>
+                  <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#rippleQuote" role="button" aria-expanded="false">
+                    현재 시세 보기
+                  </a>
+                  <button id="rip" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                    거래소 이동
+                  </button>
+                </p>
+                <div class="collapse" id="rippleQuote">
+                  <div id="rip-pirce" class="card card-body">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      
+          
+            <div class="card" style="width: 18rem;">
+              <img src="https://cdn.pixabay.com/photo/2021/05/24/09/15/ethereum-6278326__480.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">이더리움</h5>
+                <p class="card-text">이더리움에 대한 설명</p>
+                <p>
+                  <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#ethereumQuote" role="button" aria-expanded="false" >
+                    현재 시세 보기
+                  </a>
+                  <button id="ether" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                    거래소 이동
+                  </button>
+                </p>
+                <div class="collapse" id="ethereumQuote">
+                  <div id="eth-price" class="card card-body">
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+      
+   </div>
+    
+  
+
+
+   
+     <div id="displays" class="container"> 
+        
+          <div class="card" style="width: 18rem;">
+            <img src="https://cdn.econovill.com/news/photo/202204/573467_495356_727.png" class="card-img-top" alt="..." height="286">
+            <div class="card-body">
+              <h5 class="card-title">도지</h5>
+              <p class="card-text">도지코인에 대한 설명</p>
+              <p>
+                <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#dogeQuote" role="button" aria-expanded="false" aria-controls="dojiQuote">
+                  현재 시세 보기
+                </a>
+                <button id="doge" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                  거래소 이동
+                </button>
+              </p>
+              <div class="collapse" id="dogeQuote">
+                <div id="doge-price" class="card card-body">
+                 
+                </div>
+              </div>    
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQoNfh9jfKjHXnlIafs9Y0wvc59ODNyu6AGfXVNWKQKw&s" class="card-img-top" alt="..." height="286">
+            <div class="card-body">
+              <h5 class="card-title">트론</h5>
+              <p class="card-text">리플에 대한 설명</p>
+              <p>
+                <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#tronQuote" role="button" aria-expanded="false" height="286">
+                  현재 시세 보기
+                </a>
+                <button id="tron" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                  거래소 이동
+                </button>
+              </p>
+              <div class="collapse" id="tronQuote">
+                <div id="tron-price" class="card card-body">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMQ0mrQzC8cMcljnsjU0H9l6wxg5E0kG8DobJ636dtw&s" class="card-img-top" alt="..." height="286">
+            <div class="card-body">
+              <h5 class="card-title">모스코인</h5>
+              <p class="card-text">모스코인에 대한 설명</p>
+              <p>
+                <a class="btn btn-outline-info waves-effect" data-bs-toggle="collapse" href="#mosQuote" role="button" aria-expanded="false" >
+                  현재 시세 보기
+                </a>
+                <button id="mos" class="btn btn-outline-info waves-effect" type="button" onclick="pushBitcoin()">
+                  거래소 이동
+                </button>
+              </p>
+              <div class="collapse" id="mosQuote">
+                <div id="mos-price" class="card card-body">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+       
+      
+        
+    </div>
+
+  </div>  
+  </main>    
+  
+  
+ 
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    function pushBitcoin() {
+      document.getElementById("bitcoin").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-BTC";
+      };
+      document.getElementById("rip").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-XRP";
+      };
+      document.getElementById("ether").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-ETH";
+      };
+      document.getElementById("doge").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-DOGE";
+      };
+      document.getElementById("tron").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-TRX";
+      };
+      document.getElementById("mos").onclick = function () {
+        location.href = "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-MOC";
+      };
+    }
+  </script>
+
+  <script>
+    const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+        let old_Bitprice = 0;
+
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-BTC', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Bitprice !== response[0].trade_price){
+            const Ticks = document.querySelector("#bit-price");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Bitprice = response[0].trade_price;
+            }
+        })
+        .catch((err) => console.error(err));
+
+        let old_Ripprice = 0;
+
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-XRP', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Ripprice !== response[0].trade_price){
+            const Ticks = document.querySelector("#rip-pirce");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Ripprice = response[0].trade_price;
+            }
+
+        })
+        .catch((err) => console.error(err));
+
+        let old_Ethprice = 0;
+        
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-ETH', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Ethprice !== response[0].trade_price){
+            const Ticks = document.querySelector("#eth-price");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Ethprice = response[0].trade_price;
+            }
+
+        })
+        .catch((err) => console.error(err));
+
+        let old_Doge = 0;
+        
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-DOGE', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Doge !== response[0].trade_price){
+            const Ticks= document.querySelector("#doge-price");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Doge = response[0].trade_price;
+            }
+
+        })
+        .catch((err) => console.error(err));
+
+        let old_Tron = 0;
+        
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-TRX', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Tron !== response[0].trade_price){
+            const Ticks = document.querySelector("#tron-price");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Tron = response[0].trade_price;
+            }
+
+        })
+        .catch((err) => console.error(err));
+
+        let old_Mos = 0;
+        
+            fetch('https://api.upbit.com/v1/ticker?markets=KRW-MOC', options)
+            .then((response) => response.json())
+            .then((response) => {
+            if(old_Mos !== response[0].trade_price){
+            const Ticks = document.querySelector("#mos-price");
+            Ticks.innerHTML += `<p> 현재 가격: ${response[0].trade_price} 원</p>`;
+            old_Mos = response[0].trade_price;
+            }
+
+        })
+        .catch((err) => console.error(err));
+
+        
+
+  </script>
+  
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
