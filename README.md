@@ -5,6 +5,7 @@
 <p align="center">
   <strong>내가 선호하는</strong><br>
   Bitcoin-references! <br>
+  <a href="https://www.turtleheadsnake.site/bitcoin.html">Goto Site</a>
 </p>
 
 <p>평소에 관심을 두고 있는 여섯 종류의 비트코인 시세를 불러오는 페이지를 작성하였습니다. 현재 시세가에 따라 구입 매매를 결정할 수 있도록 내가 보고싶은 정보의 코인만 불러올 수 있도록 api를 사용하였습니다.</p>
