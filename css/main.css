@@ -263,70 +263,69 @@ textarea {
 
 main {
   background-color: white;
-  display: inline-block; 
+  display: inline-block;
   width: 100%;
-  padding: 20px 30px;
   margin: 0 auto;
 }
 
 #displays {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 @font-face {
-  font-family: 'SDSamliphopangche_Outline';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-family: "SDSamliphopangche_Outline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-font-family: 'GangwonEdu_OTFBoldA';
-src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-font-family: 'HSSaemaul-Regular';
-src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+  font-family: "HSSaemaul-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-font-family: 'LINESeedKR-Bd';
-src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-font-weight: 700;
-font-style: normal;
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
-header{
-font-family: 'SDSamliphopangche_Outline';
-
+header {
+  font-family: "SDSamliphopangche_Outline";
 }
-section{
-font-family: 'GangwonEdu_OTFBoldA';
-border-bottom: 1px;
+section {
+  font-family: "GangwonEdu_OTFBoldA";
+  border-bottom: 1px;
 }
-#centers{
-display: flex;
-justify-content: center;
-}
-
-.card{
-float: left;
-margin-right: 10px;
+#centers {
+  display: flex;
+  justify-content: center;
 }
 
-.card div{
-font-family: 'LINESeedKR-Bd';
+.card {
+  float: left;
+  margin-right: 10px;
 }
 
+.card div {
+  font-family: "LINESeedKR-Bd";
+}
 
-.card div div{
-font-family: 'HSSaemaul-Regular';
-font-size: 20px;
-
+.card div div {
+  font-family: "HSSaemaul-Regular";
+  font-size: 20px;
 }
